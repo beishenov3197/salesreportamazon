@@ -21,3 +21,23 @@ These insights equip Amazon with valuable information to drive strategic decisio
 
 ![Seasons](https://github.com/beishenov3197/salesreportamazon/assets/112967670/bd46aee4-7ab1-4158-8148-a4811273915b)
 
+- Notable growth was observed in October 2021 following a period of recession, although the rate of growth appeared to be slower compared to previous periods.
+- The overall trend remained relatively stable without significant fluctuations.
+- There was a noticeable decline leading up to October, with a slight recovery followed by a continuous decrease until the end of the observed period.
+
+#### monthly_sales = sales_data.set_index('DATE').resample('M')['GROSS AMT'].sum()
+#### stl = STL(monthly_sales, seasonal=13)  # Adjust the seasonal parameter based on your data
+#### result = stl.fit()
+#### seasonal, trend, residual = result.seasonal, result.trend, result.resid
+#### plt.figure(figsize=(12, 6))
+#### plt.subplot(311)
+#### plt.plot(seasonal)
+#### plt.title('Seasonal Component')
+#### plt.subplot(312)
+#### plt.plot(trend)
+#### plt.title('Trend Component')
+#### plt.subplot(313)
+#### plt.plot(residual)
+#### plt.title('Residual Component')
+#### plt.tight_layout()
+#### plt.show()
