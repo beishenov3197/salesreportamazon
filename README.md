@@ -31,13 +31,25 @@ These insights equip Amazon with valuable information to drive strategic decisio
 #### seasonal, trend, residual = result.seasonal, result.trend, result.resid
 #### plt.figure(figsize=(12, 6))
 #### plt.subplot(311)
-#### plt.plot(seasonal)
-#### plt.title('Seasonal Component')
-#### plt.subplot(312)
-#### plt.plot(trend)
-#### plt.title('Trend Component')
-#### plt.subplot(313)
-#### plt.plot(residual)
-#### plt.title('Residual Component')
-#### plt.tight_layout()
-#### plt.show()
+
+## Most and least profitable products
+
+![image](https://github.com/beishenov3197/salesreportamazon/assets/112967670/92603da4-4d70-4e63-8ebe-ccc3f8d65313)
+
+![image](https://github.com/beishenov3197/salesreportamazon/assets/112967670/8107a4f4-93a1-4f24-a728-9daa37b04697)
+
+#### product_profit = sales_data.groupby('SKU')['Cost of Products Sold'].sum() - sales_data.groupby('SKU')['GROSS AMT'].sum()
+#### product_profit = product_profit.reset_index()
+#### most_profitable_products = product_profit.sort_values(by=0, ascending=False)
+#### print("Most Profitable Products:")
+#### print(most_profitable_products.head())
+
+#### least_profitable_products = product_profit.sort_values(by=0, ascending=True)
+
+## Monthly sales trends
+
+![Monthly sales](https://github.com/beishenov3197/salesreportamazon/assets/112967670/e439eccb-f0f9-4998-8838-bd217a5d1436)
+
+- Sales follow a standard seasonal trend, rising from June to September, peaking in October, and sharply decreasing until December.
+- The month of October stands out as the peak sales period, indicating the importance of focusing marketing and operational efforts during this time.
+- After the decline in sales from October to December, there's a subsequent sharp increase, albeit not as significant as the October peak, suggesting potential opportunities for year-end recovery strategies.
