@@ -53,3 +53,11 @@ These insights equip Amazon with valuable information to drive strategic decisio
 - Sales follow a standard seasonal trend, rising from June to September, peaking in October, and sharply decreasing until December.
 - The month of October stands out as the peak sales period, indicating the importance of focusing marketing and operational efforts during this time.
 - After the decline in sales from October to December, there's a subsequent sharp increase, albeit not as significant as the October peak, suggesting potential opportunities for year-end recovery strategies.
+
+## Relationship between product price and sales
+
+![Relationship](https://github.com/beishenov3197/salesreportamazon/assets/112967670/9a343bc0-b160-4e40-a263-221a6948b40f)
+
+- The majority of sales are concentrated within the price range of $0-$2,000, with the highest concentration observed in products priced below $1,000.
+- There is a notable peak in sales with higher transaction amounts, particularly close to $10,000, often associated with products priced over $2,000.
+- Sales gradually decrease within the price range of $2,000 to $6,000, suggesting a shift in consumer preferences or potentially a need for more targeted marketing strategies in this price segment.
